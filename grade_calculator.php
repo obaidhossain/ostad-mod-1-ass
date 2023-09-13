@@ -3,6 +3,8 @@
  Develop a PHP script named grade_calculator.php that computes the average of three test scores and determines the corresponding letter grade. 
  Create a form where the user can input three test scores. Calculate the average and display it along with the corresponding grade (A, B, C, D, F).
  Or, declare 3 variable test scores and calculate the average and display it along with the corresponding grade (A, B, C, D, F)
+
+ Preview Link: https://themenut.com/sample/ostad/grade-calculator.php
  */
 ?>
 <!DOCTYPE html>
@@ -17,15 +19,15 @@
     // Function to calculate the letter grade
     function calculateGrade($avg) {
         return ($avg >= 90) ? "A" : (
-                 ($avg >= 80) ? "B" : (
-                   ($avg >= 70) ? "C" : (
-                     ($avg >= 60) ? "D" : "F"
+                       ($avg >= 80) ? "B" : (
+                       ($avg >= 70) ? "C" : (
+                       ($avg >= 60) ? "D" : "F"
                    )
-                 )
-               );
+               )
+           );
     }
     function calculateAvg($score1,$score2,$score3) {
-        return ($score1 + $score2 + $score3) / 3;
+        return round(($score1 + $score2 + $score3) / 3,2);
     }
 
     // Check if the form was submitted
@@ -62,7 +64,7 @@
     <h2>Calculate Grades for Pre-declared Test Scores:</h2>
     <?php
     // Pre-declared test scores
-    $preDeclaredScore1 = 70;
+    $preDeclaredScore1 = 80;
     $preDeclaredScore2 = 55;
     $preDeclaredScore3 = 95;
 
